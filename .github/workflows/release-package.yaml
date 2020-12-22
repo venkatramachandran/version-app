@@ -80,5 +80,13 @@ jobs:
           build-args: |
             gitsha=${{ steps.gitsha.outputs.sha8 }}
       -
+        name: Scan Container
+        id: scan_container
+        uses: azure/container-scan@v0
+        with:
+          image-name: ${{ steps.repo.outputs.repo }}/${{ github.repository }}
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+      -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
