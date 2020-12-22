@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/venkatramachandran/version-app/compare/v1.0.1...v1.0.2) (2020-12-22)
+
+
+### Bug Fixes
+
+* fix security vulnerabilities ([55d50a8](https://github.com/venkatramachandran/version-app/commit/55d50a82dd54059f9a7152a38528f8035f15625a))
+
 ## [1.0.1](https://github.com/venkatramachandran/version-app/compare/v1.0.0...v1.0.1) (2020-12-22)
 
 
