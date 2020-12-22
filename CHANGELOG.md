@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/venkatramachandran/version-app/compare/v1.0.2...v1.0.3) (2020-12-22)
+
+
+### Bug Fixes
+
+* update start command ([c3d1dec](https://github.com/venkatramachandran/version-app/commit/c3d1dec9a57309332e26a35b567825f81cfaf3c0))
+
 ## [1.0.2](https://github.com/venkatramachandran/version-app/compare/v1.0.1...v1.0.2) (2020-12-22)
 
 
