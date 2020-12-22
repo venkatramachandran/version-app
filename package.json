@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "cm": "git-cz",
-    "start": "npm run build && gitsha=$(git rev-parse --short HEAD) node build/index",
+    "start": "node build/index",
     "build": "tsc",
     "lint": "eslint -c .eslintrc.json",
     "prepublishOnly": "npm run build",
