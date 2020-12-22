@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/venkatramachandran/version-app/compare/v1.0.3...v1.0.4) (2020-12-22)
+
+
+### Bug Fixes
+
+* make start command more useful ([f8fb411](https://github.com/venkatramachandran/version-app/commit/f8fb411238cdcb8a8c7bbe8d52423f1931a2df44))
+
 ## [1.0.3](https://github.com/venkatramachandran/version-app/compare/v1.0.2...v1.0.3) (2020-12-22)
 
 
