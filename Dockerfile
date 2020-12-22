@@ -16,5 +16,4 @@ RUN npm install --only-prod
 COPY --from=builder /app/build/ ./build/
 EXPOSE 3000
 ENV gitsha=${gitsha}
-USER node
 ENTRYPOINT [ "node", "build/index" ]
