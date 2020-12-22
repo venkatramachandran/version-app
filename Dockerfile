@@ -17,4 +17,4 @@ COPY --from=builder /app/build/ ./build/
 EXPOSE 3000
 ENV gitsha=${gitsha}
 USER node
-ENTRYPOINT [ "npm", "start" ]
+ENTRYPOINT [ "node", "build/index" ]

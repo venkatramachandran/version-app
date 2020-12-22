@@ -5,6 +5,8 @@ Once the repo is cloned, running `npm i` to install all dependencies is required
 ## Running Locally
 The application is built using Typescript/Node and uses express as the HTTP web framework. To run locally, the code needs to be transpiled from TS to JS by invoking `npm run build`. 
 
+To quickstart, run `npm start` which will build the code and run the server.
+
 ## Testing
 Jest is used as the unit testing framework. More tests need to be added but existing tests can be run and code validated using `npm test`.
 
