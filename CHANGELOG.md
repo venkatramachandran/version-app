@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/venkatramachandran/version-app/compare/v1.0.4...v1.0.5) (2020-12-22)
+
+
+### Bug Fixes
+
+* **dockerfile:** removed USER ([874c1dc](https://github.com/venkatramachandran/version-app/commit/874c1dca41a0695d690836df768a3031ae1d5d4b))
+
 ## [1.0.4](https://github.com/venkatramachandran/version-app/compare/v1.0.3...v1.0.4) (2020-12-22)
 
 
