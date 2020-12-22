@@ -1,6 +1,6 @@
 {
   "name": "@venkatramachandran/version-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ANZ Version App",
   "main": "dist/index.js",
   "scripts": {
