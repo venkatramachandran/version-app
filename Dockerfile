@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 COPY tsconfig.json ./
 COPY src src
-RUN npm install typescript && non run build
+RUN npm install typescript && npm run build
 
 FROM node:12-alpine
 LABEL org.opencontainers.image.source https://github.com/venkatramachandran/version-app
