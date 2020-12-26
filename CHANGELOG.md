@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/venkatramachandran/version-app/compare/v1.0.5...v1.0.6) (2020-12-26)
+
+
+### Bug Fixes
+
+* **dockerfile:** fix typo ([86b2acb](https://github.com/venkatramachandran/version-app/commit/86b2acbc5bd835eab7191d1037a6383b368fac98))
+* **dockerfile:** remove unwanted dependencies ([4b26cc4](https://github.com/venkatramachandran/version-app/commit/4b26cc4522f77963b50b99a75df717d5a50e4f67))
+
 ## [1.0.5](https://github.com/venkatramachandran/version-app/compare/v1.0.4...v1.0.5) (2020-12-22)
 
 
