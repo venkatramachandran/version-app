@@ -2,11 +2,9 @@ ARG gitsha
 FROM node:12-alpine AS builder
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm ci
 COPY tsconfig.json ./
 COPY src src
-RUN npm install
-RUN npm run build
+RUN npm install typescript && non run build
 
 FROM node:12-alpine
 LABEL org.opencontainers.image.source https://github.com/venkatramachandran/version-app
