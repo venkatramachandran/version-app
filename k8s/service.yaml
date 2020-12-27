@@ -4,6 +4,7 @@ metadata:
   name: version-app
   namespace: technical-test
 spec:
+  type: LoadBalancer
   selector:
     app: version-app
   ports:
