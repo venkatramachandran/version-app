@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/venkatramachandran/version-app/compare/v1.0.6...v1.0.7) (2020-12-27)
+
+
+### Bug Fixes
+
+* add git sha an an arg and tag image as latest ([2ffc778](https://github.com/venkatramachandran/version-app/commit/2ffc778a83605e4aaf2ea15bba6331707098d874))
+
 ## [1.0.6](https://github.com/venkatramachandran/version-app/compare/v1.0.5...v1.0.6) (2020-12-26)
 
 
