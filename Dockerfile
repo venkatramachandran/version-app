@@ -7,6 +7,7 @@ COPY src src
 RUN npm install typescript && npm run build
 
 FROM node:12-alpine
+ARG gitsha
 LABEL org.opencontainers.image.source https://github.com/venkatramachandran/version-app
 WORKDIR /app
 COPY package.json package-lock.json ./

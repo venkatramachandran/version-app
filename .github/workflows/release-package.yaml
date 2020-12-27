@@ -74,6 +74,7 @@ jobs:
         with:
           push: true
           tags: |
+            ${{ steps.repo.outputs.repo }}/${{ github.repository }}:latest
             ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }}
             ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ needs.publish-npm.outputs.next_version}}
           build-args: |
