@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/venkatramachandran/version-app/compare/v1.0.7...v1.0.8) (2020-12-27)
+
+
+### Bug Fixes
+
+* **service.yaml:** add loadbalancer as service type ([b4c00fd](https://github.com/venkatramachandran/version-app/commit/b4c00fd36cd69999c55bc3f7cdecdf4baa7982af))
+
 ## [1.0.7](https://github.com/venkatramachandran/version-app/compare/v1.0.6...v1.0.7) (2020-12-27)
 
 
