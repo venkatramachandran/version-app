@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/venkatramachandran/version-app/compare/v1.0.9...v1.0.10) (2020-12-29)
+
+
+### Bug Fixes
+
+* **.github:** get scanning to work ([b986214](https://github.com/venkatramachandran/version-app/commit/b98621442bb75bee8e0ca9b9ef17a69cdd8b0fc1))
+
 ## [1.0.9](https://github.com/venkatramachandran/version-app/compare/v1.0.8...v1.0.9) (2020-12-29)
 
 
