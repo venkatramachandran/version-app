@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/venkatramachandran/version-app/compare/v1.0.8...v1.0.9) (2020-12-29)
+
+
+### Bug Fixes
+
+* **.github:** remove latest tag from image ([774d3db](https://github.com/venkatramachandran/version-app/commit/774d3db035f6b9c4c62469925dd9885663ad962a))
+
 ## [1.0.8](https://github.com/venkatramachandran/version-app/compare/v1.0.7...v1.0.8) (2020-12-27)
 
 
