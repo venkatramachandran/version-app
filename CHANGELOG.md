@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/venkatramachandran/version-app/compare/v1.0.11...v1.0.12) (2020-12-31)
+
+
+### Bug Fixes
+
+* **.github:** add missing cli option in docker build ([7855be4](https://github.com/venkatramachandran/version-app/commit/7855be4d27f62b2ce98e66e5a1c139d3046468e8))
+
 ## [1.0.11](https://github.com/venkatramachandran/version-app/compare/v1.0.10...v1.0.11) (2020-12-31)
 
 
