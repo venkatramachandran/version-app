@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/venkatramachandran/version-app/compare/v1.0.13...v1.0.14) (2020-12-31)
+
+
+### Bug Fixes
+
+* **.github:** fix typo ([932a131](https://github.com/venkatramachandran/version-app/commit/932a1318a921ee72b8c5a0cdac2f466d4b912f56))
+
 ## [1.0.13](https://github.com/venkatramachandran/version-app/compare/v1.0.12...v1.0.13) (2020-12-31)
 
 
