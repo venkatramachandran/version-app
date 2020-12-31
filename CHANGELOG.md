@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/venkatramachandran/version-app/compare/v1.0.14...v1.0.15) (2020-12-31)
+
+
+### Bug Fixes
+
+* fix log level in npm scripts ([43ad6f1](https://github.com/venkatramachandran/version-app/commit/43ad6f126d1e5fa91b080ae0f30b764b4861dce2))
+
 ## [1.0.14](https://github.com/venkatramachandran/version-app/compare/v1.0.13...v1.0.14) (2020-12-31)
 
 
