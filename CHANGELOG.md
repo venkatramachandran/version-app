@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/venkatramachandran/version-app/compare/v1.0.10...v1.0.11) (2020-12-31)
+
+
+### Bug Fixes
+
+* **.github:** restructure github action ([01b6099](https://github.com/venkatramachandran/version-app/commit/01b6099cc34629cd4462268d2b24e08a670f4c27))
+
 ## [1.0.10](https://github.com/venkatramachandran/version-app/compare/v1.0.9...v1.0.10) (2020-12-29)
 
 
