@@ -68,25 +68,31 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.DOCKER_TOKEN }}
       -
-        name: Build and push
+        name: Run Docker Build
         id: docker_build
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: |
-            ${{ steps.repo.outputs.repo }}/${{ github.repository }}:latest
-            ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }}
-            ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ needs.publish-npm.outputs.next_version}}
-          build-args: |
-            gitsha=${{ steps.gitsha.outputs.sha8 }}
+        run: docker build --build-arg gitsha=${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:latest -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ needs.publish-npm.outputs.next_version}} .
+      #-
+      #  name: Build and push
+      #  id: docker_build
+      #  uses: docker/build-push-action@v2
+      #  with:
+      #    push: true
+      #    tags: |
+      #      ${{ steps.repo.outputs.repo }}/${{ github.repository }}:latest
+      #      ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }}
+      #      ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ needs.publish-npm.outputs.next_version}}
+      #    build-args: |
+      #      gitsha=${{ steps.gitsha.outputs.sha8 }}
       -
         name: Scan Container
         id: scan_container
         uses: azure/container-scan@v0
         with:
-          image-name: ${{ steps.repo.outputs.repo }}/${{ github.repository }}}
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.DOCKER_TOKEN }}
-      -
-        name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+          image-name: ${{ steps.repo.outputs.repo }}/${{ github.repository }}}:${{ steps.gitsha.outputs.sha8 }}
+      - 
+        name: Docker push
+        id: docker_push
+        run: docker push --all-tags ${{ steps.repo.outputs.repo }}/${{ github.repository }}
+      #-
+      #  name: Image digest
+      #  run: echo ${{ steps.docker_build.outputs.digest }}
