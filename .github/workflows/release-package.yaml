@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
+      - run: npm ci --loglevel silent
       - run: npm test
       - run: npm audit --audit-level=moderate
 
@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
+      - run: npm ci --loglevel silent
       - run: npm run release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -81,4 +81,4 @@ jobs:
       - 
         name: Docker push
         id: docker_push
-        run: docker push --all-tags ${{ steps.repo.outputs.repo }}/${{ github.repository }}
+        run: docker image push --all-tags ${{ steps.repo.outputs.repo }}/${{ github.repository }}

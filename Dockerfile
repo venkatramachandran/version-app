@@ -11,7 +11,7 @@ ARG gitsha
 LABEL org.opencontainers.image.source https://github.com/venkatramachandran/version-app
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm install --only-prod
+RUN npm install --only-prod --loglevel silent
 COPY --from=builder /app/build/ ./build/
 EXPOSE 3000
 ENV gitsha=${gitsha}
