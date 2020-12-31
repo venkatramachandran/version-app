@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/venkatramachandran/version-app/compare/v1.0.15...v1.0.16) (2020-12-31)
+
+
+### Bug Fixes
+
+* workaround for docker image push --all-tags not working ([08593f7](https://github.com/venkatramachandran/version-app/commit/08593f71c730370dde4f203c7aee6205efe52084))
+
 ## [1.0.15](https://github.com/venkatramachandran/version-app/compare/v1.0.14...v1.0.15) (2020-12-31)
 
 
