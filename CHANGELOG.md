@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/venkatramachandran/version-app/compare/v1.0.12...v1.0.13) (2020-12-31)
+
+
+### Bug Fixes
+
+* **.github:** add missing checkout step in docker build ([e2de9a2](https://github.com/venkatramachandran/version-app/commit/e2de9a26bf68a28e2170b2f9ba944fa50d4ba70f))
+
 ## [1.0.12](https://github.com/venkatramachandran/version-app/compare/v1.0.11...v1.0.12) (2020-12-31)
 
 
