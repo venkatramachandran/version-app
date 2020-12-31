@@ -70,7 +70,7 @@ jobs:
       -
         name: Run Docker Build
         id: docker_build
-        run: docker build --build-arg gitsha=${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:latest -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ needs.publish-npm.outputs.next_version}} .
+        run: docker build --build-arg gitsha=${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:latest -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ needs.publish-npm.outputs.next_version}} --file ./Dockerfile .
       #-
       #  name: Build and push
       #  id: docker_build
