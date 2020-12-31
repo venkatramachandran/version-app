@@ -46,6 +46,7 @@ jobs:
     if: ${{ needs.publish-npm.outputs.next_version != null}}
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       -
         name: Get short SHA
         id: gitsha
