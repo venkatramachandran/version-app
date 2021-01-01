@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/venkatramachandran/version-app/compare/v1.0.17...v1.0.18) (2021-01-01)
+
+
+### Bug Fixes
+
+* **dockerfile:** fix sec vuln ([27e3b23](https://github.com/venkatramachandran/version-app/commit/27e3b2332938a8916788967d051bbe7218d86332))
+
 ## [1.0.17](https://github.com/venkatramachandran/version-app/compare/v1.0.16...v1.0.17) (2021-01-01)
 
 
