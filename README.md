@@ -32,6 +32,7 @@ The kubernetes script is in the `k8s` directory, named `k8s.sh`. Running the scr
  - The CI pipeline runs `npm audit` to scan the node code for any vulnerabilities but is missing docker image scanning. (*Fixed*)
  - `DOKCER_TOKEN` is a token referred to in the pipeline which is a GitHub Personal Access Token generated as defined [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token). This is needed because the default `GITHUB_TOKEN` does not have enough permissions to publish to `ghcr.io`. *This is a manual step in the whole setup.*
  - The `deployment.yaml` is incomplete because it is missing the secret to pull from `ghcr.io` as the images are private by default. *(Fixed-the images are public now)*
+ - The CI pipeline has an unnecessary step of publishing the artifact to npm. This can be removed and only the docket image be published to ghcr.
 
 ## TODO
 See [here](TODO.md) for a list of things that are incomplete.
