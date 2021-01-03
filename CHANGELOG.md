@@ -1,3 +1,10 @@
+## [1.0.19](https://github.com/venkatramachandran/version-app/compare/v1.0.18...v1.0.19) (2021-01-03)
+
+
+### Bug Fixes
+
+* **package.json:** remove npm step ([#1](https://github.com/venkatramachandran/version-app/issues/1)) ([c47e398](https://github.com/venkatramachandran/version-app/commit/c47e398079e2990540f8f88a6994a22b3b24bca8))
+
 ## [1.0.18](https://github.com/venkatramachandran/version-app/compare/v1.0.17...v1.0.18) (2021-01-01)
 
 
