@@ -1,3 +1,10 @@
+## [1.0.20](https://github.com/venkatramachandran/version-app/compare/v1.0.19...v1.0.20) (2021-01-03)
+
+
+### Bug Fixes
+
+* **dockerfile:** fix exposed port ([51fd196](https://github.com/venkatramachandran/version-app/commit/51fd1962f772a0af2fe69681890e965fd3985cca))
+
 ## [1.0.19](https://github.com/venkatramachandran/version-app/compare/v1.0.18...v1.0.19) (2021-01-03)
 
 
