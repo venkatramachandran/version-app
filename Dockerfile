@@ -13,7 +13,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install --only-prod --loglevel silent
 COPY --from=builder /app/build/ ./build/
-EXPOSE 300
+EXPOSE 3000
 USER node
 ENV gitsha=${gitsha}
 ENTRYPOINT [ "node", "build/index" ]
