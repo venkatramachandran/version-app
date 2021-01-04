@@ -11,8 +11,6 @@
     "lint": "eslint -c .eslintrc.json",
     "prepublishOnly": "npm run build",
     "clean": "rm -rf build",
-    "postrelease": "run-s release:tags",
-    "release:tags": "git push --follow-tags origin main",
     "release": "semantic-release"
   },
   "repository": {
@@ -60,7 +58,11 @@
   },
   "release": {
     "branches": [
-      "main"
+      "main",
+      {
+        "name": "*",
+        "prerelease": true
+      }
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
