@@ -69,7 +69,7 @@ jobs:
       -
         name: Run Docker Build
         id: docker_build
-        run: docker build --build-arg gitsha=${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:latest -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ GITHUB_REF }} --file ./Dockerfile .
+        run: docker build --build-arg gitsha=${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:latest -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ needs.create-release.outputs.next_version }} --file ./Dockerfile .
       -
         name: Scan Container
         id: scan_container
