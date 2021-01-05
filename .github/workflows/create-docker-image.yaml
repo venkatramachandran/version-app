@@ -1,8 +1,7 @@
 name: Create Docker Image
 
 on:
-  release:
-    types: [created]
+  release
 
 jobs:
   publish-docker:
