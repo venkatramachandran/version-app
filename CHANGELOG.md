@@ -1,3 +1,11 @@
+## [1.0.21](https://github.com/venkatramachandran/version-app/compare/v1.0.20...v1.0.21) (2021-01-05)
+
+
+### Bug Fixes
+
+* Remove unwanted step ([e0f32bb](https://github.com/venkatramachandran/version-app/commit/e0f32bbcb76296b7d8fb7bb68640368191edba5a))
+* Split pipeline into 2 ([685a583](https://github.com/venkatramachandran/version-app/commit/685a583a400572a533dfa847e833b00b548240e2))
+
 ## [1.0.20](https://github.com/venkatramachandran/version-app/compare/v1.0.19...v1.0.20) (2021-01-03)
 
 
