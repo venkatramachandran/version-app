@@ -1,3 +1,11 @@
+## [1.0.24](https://github.com/venkatramachandran/version-app/compare/v1.0.23...v1.0.24) (2021-01-05)
+
+
+### Bug Fixes
+
+* fixed missing var ([c4680ba](https://github.com/venkatramachandran/version-app/commit/c4680ba8851c01470b3793d6f824c3c504957171))
+* merged pipelines into 1 due to github actions limitation ([281d148](https://github.com/venkatramachandran/version-app/commit/281d14814718412c0c28876e18942cdd137fc52e))
+
 ## [1.0.23](https://github.com/venkatramachandran/version-app/compare/v1.0.22...v1.0.23) (2021-01-05)
 
 
