@@ -1,3 +1,10 @@
+## [1.0.22](https://github.com/venkatramachandran/version-app/compare/v1.0.21...v1.0.22) (2021-01-05)
+
+
+### Bug Fixes
+
+* changed workflow trigger ([9e1d389](https://github.com/venkatramachandran/version-app/commit/9e1d3894a382760ef56b0b0b2642b742eaabc206))
+
 ## [1.0.21](https://github.com/venkatramachandran/version-app/compare/v1.0.20...v1.0.21) (2021-01-05)
 
 
