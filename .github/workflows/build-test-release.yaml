@@ -1,0 +1,82 @@
+name: Build, Test and Release
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci --loglevel silent
+      - run: npm test
+      - run: npm audit --audit-level=moderate
+
+  create-release:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    outputs:
+      next_version: ${{ steps.nextversion.outputs.next_version }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci --loglevel silent
+      - run: npm run release
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: next version
+        id: nextversion
+        run: echo "::set-output name=next_version::$(cat .version)"
+
+  publish-docker:
+    needs: create-release
+    if: ${{ needs.create-release.outputs.next_version != null}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      -
+        name: Get short SHA
+        id: gitsha
+        run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
+      -
+        name: Set Docker Repo
+        id: repo
+        run: echo "::set-output name=repo::ghcr.io"
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ steps.repo.outputs.repo }}
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+      -
+        name: Run Docker Build
+        id: docker_build
+        run: docker build --build-arg gitsha=${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:latest -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }} -t ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ GITHUB_REF }} --file ./Dockerfile .
+      -
+        name: Scan Container
+        id: scan_container
+        uses: azure/container-scan@v0
+        with:
+          image-name: ${{ steps.repo.outputs.repo }}/${{ github.repository }}:${{ steps.gitsha.outputs.sha8 }}
+      -
+        name: Docker push
+        id: docker_push
+        run: for tag in latest ${{ needs.create-release.outputs.next_version }} ${{ steps.gitsha.outputs.sha8 }}; do docker push ${{ steps.repo.outputs.repo }}/${{ github.repository }}:$tag; done
