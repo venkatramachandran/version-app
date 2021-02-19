@@ -22,6 +22,7 @@ jobs:
 
   create-release:
     needs: build-and-test
+    if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
     outputs:
       next_version: ${{ steps.nextversion.outputs.next_version }}
