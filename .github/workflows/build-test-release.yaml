@@ -43,6 +43,20 @@ jobs:
         id: nextversion
         run: echo "::set-output name=next_version::$(cat .version)"
 
+  close-pr:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot' }}
+    steps:
+      - name: close pr
+      - id: close_pr
+        uses: actions/github-script@0.3.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+            github.issues.createComment({ issue_number, owner, repo, body: '@dependabot squash and merge' });
+        
   publish-docker:
     needs: create-release
     if: ${{ needs.create-release.outputs.next_version != null}}
