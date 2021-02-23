@@ -49,7 +49,7 @@ jobs:
     if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot' }}
     steps:
       - name: close pr
-      - id: close_pr
+        id: close_pr
         uses: actions/github-script@0.3.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
