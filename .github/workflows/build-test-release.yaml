@@ -19,7 +19,7 @@ jobs:
       - run: npm ci --loglevel silent
       - run: npm test
       - run: npm audit --audit-level=moderate
-      - run: 'echo ${{ github.event_name }} is the event and ${{ github.event.pull_request.user.login }} is the user'
+      #- run: 'echo ${{ github.event_name }} is the event and ${{ github.event.pull_request.user.login }} is the user'
 
   create-release:
     needs: build-and-test
@@ -47,7 +47,7 @@ jobs:
   close-pr:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot' }}
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]' }}
     steps:
       - name: close pr
         id: close_pr
