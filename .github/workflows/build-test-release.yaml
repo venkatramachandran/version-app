@@ -19,6 +19,7 @@ jobs:
       - run: npm ci --loglevel silent
       - run: npm test
       - run: npm audit --audit-level=moderate
+      - run: 'echo ${{ github.event_name }} is the event and ${{ github.event.pull_request.user.login }} is the user'
 
   create-release:
     needs: build-and-test
