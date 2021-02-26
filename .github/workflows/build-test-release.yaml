@@ -51,9 +51,9 @@ jobs:
     steps:
       - name: close pr
         id: close_pr
-        uses: actions/github-script@0.3.0
+        uses: actions/github-script@v3
         with:
-          github-token: ${{ secrets.PR_COMMENT_TOKEN }}
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
             github.issues.createComment({ issue_number, owner, repo, body: '@dependabot squash and merge' });
