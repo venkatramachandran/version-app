@@ -68,7 +68,7 @@ jobs:
         with:
           registry: ${{ steps.repo.outputs.repo }}
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.DOCKER_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Run Docker Build
         id: docker_build
